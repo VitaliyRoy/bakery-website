@@ -116,6 +116,13 @@ ul {
   background-color: transparent;
 }
 
+/* .button[disabled] {
+  color: grey;
+  border-color: currentColor;
+  background-color: lightgray;
+  cursor: not-allowed;
+} */
+
 /* Link */
 .link {
   color: var(--color-primary-light);
@@ -543,6 +550,14 @@ ul {
   outline: none;
 }
 
+.form-input:disabled {
+  border-color: lightgrey;
+}
+
+.form-input:disabled::placeholder {
+  color: lightgrey;
+}
+
 .form-input::placeholder {
   color: var(--color-secondary-dark);
   font-size: 16px;
@@ -571,3 +586,31 @@ ul {
   color: var(--color-primary-dark);
   text-underline-offset: 2px;
 }
+
+/* .checkbox {
+  position: relative;
+}
+
+.checkbox-input {
+  appearance: none;
+}
+
+.checkbox-input:checked + .checkbox-lable::before {
+  background-color: green;
+}
+
+.checkbox-lable {
+  padding-left: 24px;
+}
+
+.checkbox-lable::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  margin-top: 5px;
+  border: 1px solid var(--color-primary-dark);
+  border-radius: 2px;
+  content: '';
+} */
