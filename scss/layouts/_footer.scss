@@ -9,10 +9,15 @@
 
   &::before,
   &::after {
+    display: none;
     position: absolute;
-    bottom: 0;
     background-repeat: no-repeat;
     content: '';
+
+    @media screen and (min-width: $bp-tablet) {
+      display: block;
+      bottom: 0;
+    }
   }
 
   &::before {
@@ -24,7 +29,7 @@
 
   &::after {
     width: 380px;
-    height: 190px;
+    height: 187px;
     right: 0;
     background-image: url('../images/decor-bread-large.png');
   }
@@ -54,13 +59,38 @@
   }
 
   &__logo,
-  &__menu {
+  &__menu,
+  &__address-list,
+  &__address-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: 16px;
+  }
+
+  &__logo {
+    align-items: center;
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+      align-items: start;
+      margin-bottom: 0px;
+    }
+  }
+
+  &__address-contacts {
     flex-grow: 1;
   }
 
-  &__address-list,
-  &__address-info {
-    flex-grow: 1;
+  &__icons-container {
+    padding-top: 16px;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: start;
+    }
   }
 
   &__address-link {
@@ -68,6 +98,7 @@
     font-size: 16px;
     font-weight: 300;
     text-decoration: none;
+    transition: color 0.3s;
   }
 
   &__address-link:hover {
@@ -76,6 +107,7 @@
 
   &__address-icon {
     fill: var(--color-primary-light);
+    transition: fill 0.3s;
   }
 
   &__address-icon:hover {
@@ -84,5 +116,6 @@
 
   &__address-copyright {
     font-size: 14px;
+    color: var(--color-secondary-dark);
   }
 }
