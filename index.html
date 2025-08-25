@@ -39,8 +39,37 @@
           </button>
           <div class="mobile-menu">
             <button class="mobile-menu__btn-close menu-btn-close" type="button">
-              Close
+              <svg class="" width="24" height="24">
+                <use href="./images/icons.svg#icon-modal-close-button"></use>
+              </svg>
             </button>
+            <nav class="mobile-menu__nav">
+              <a class="mobile-menu__logo" href="/">
+                <img src="./images/logo.png" alt="Логотип сучасної пекарні" />
+              </a>
+              <ul class="mobile-menu__menu">
+                <li>
+                  <a class="mobile-menu__link link" href="#traditions-section"
+                    >Наші традиції</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu__link link" href="#chefs-section"
+                    >Шеф-кухарі</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu__link link" href="#formats-section"
+                    >Формати</a
+                  >
+                </li>
+                <li>
+                  <a class="mobile-menu__link link" href="#contact-section"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
       </div>
@@ -312,7 +341,7 @@
           </div>
         </div>
       </section>
-      <section class="contact-section section" id="contact-section">
+      <section class="contact-section" id="contact-section">
         <div class="container">
           <div class="contact-section__container">
             <div class="contact-section__form">
@@ -394,10 +423,12 @@
               </a>
             </div>
             <ul class="footer__menu">
-              <li><a class="link" href="#">Наші традиції</a></li>
-              <li><a class="link" href="#">Шеф-кухарі</a></li>
-              <li><a class="link" href="#">Формати</a></li>
-              <li><a class="link" href="#">Контакти</a></li>
+              <li>
+                <a class="link" href="#traditions-section">Наші традиції</a>
+              </li>
+              <li><a class="link" href="#chefs-section">Шеф-кухарі</a></li>
+              <li><a class="link" href="#formats-section">Формати</a></li>
+              <li><a class="link" href="#contact-section">Контакти</a></li>
             </ul>
           </nav>
           <address class="footer__address">
